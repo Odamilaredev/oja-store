@@ -1,0 +1,1 @@
+import Link from 'next/link'; export default function Success(){return <main className="page"><div className="panel"><h1>Order received.</h1><p>Your payment has been handed to the store. We’ll use the delivery details you provided to fulfil the order.</p><Link className="btn" href="/account">View account</Link> <Link href="/shop">Keep shopping →</Link></div></main>}

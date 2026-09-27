@@ -1,0 +1,3 @@
+import {NextResponse} from 'next/server'; import {db} from '@/lib/db'; import {requireAdmin} from '@/lib/auth';
+export async function GET(){try{await requireAdmin();return NextResponse.json(await db.order.findMany({include:{items:true},orderBy:{createdAt:'desc'}}))}catch{return NextResponse.json({error:'Unauthorized'},{status:401})}}
+export async function PATCH(req:Request){try{await requireAdmin();const {id,status}=await req.json();const allowed=['PENDING','PAID','PROCESSING','SHIPPED','DELIVERED','CANCELLED'];if(!allowed.includes(status))return NextResponse.json({error:'Invalid status'},{status:400});return NextResponse.json(await db.order.update({where:{id},data:{status}}))}catch{return NextResponse.json({error:'Unable to update order.'},{status:400})}}
