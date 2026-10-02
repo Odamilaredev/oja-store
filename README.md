@@ -28,3 +28,5 @@ Set `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET`. Point the Stripe webhook to
 - Add CSRF protection/rate limiting at the edge for high-traffic deployments.
 - Configure a real shipping/tax policy and verify NGN payment availability for the Stripe account/region.
 - Review privacy, returns, tax, and consumer-protection requirements before launch.
+
+# OJA Store
