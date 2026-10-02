@@ -30,3 +30,5 @@ Set `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET`. Point the Stripe webhook to
 - Review privacy, returns, tax, and consumer-protection requirements before launch.
 
 # OJA Store
+
+Deployment configured.
